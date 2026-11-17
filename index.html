@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pit Wall</title>
+<meta name="description" content="Predict every F1 race, beat the model, climb the league.">
+<meta name="theme-color" content="#0b0d10">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pit Wall">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:title" content="Pit Wall Predictor">
+<meta property="og:description" content="Predict every F1 race, beat the model, climb the league.">
+<meta property="og:image" content="icon-512.png">
+<script>
+  // Opened from the home-screen icon: go straight to the game
+  var APP = 'https://claude.ai/artifact/Hd1mfV7bFV35XLV8JXfiqr';
+  var standalone = window.navigator.standalone === true || (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || /[?&]launch=1/.test(location.search);
+  if (standalone) location.replace(APP);
+</script>
+<style>
+  :root{--bg:#0b0d10;--panel:#14171c;--line:#2a2f38;--ink:#eef1f5;--mute:#8d96a4;--red:#ff2d20;--gold:#ffb81c;color-scheme:dark}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+  main{max-width:440px;margin:0 auto;padding:calc(36px + env(safe-area-inset-top)) 20px 40px;display:grid;gap:20px;text-align:center}
+  img{width:112px;height:112px;border-radius:26px;margin:0 auto;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+  h1{margin:4px 0 0;font-size:30px;font-style:italic;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+  p{margin:0;color:var(--mute)}
+  .open{display:block;background:var(--red);color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:15px;border-radius:12px;font-size:17px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:left}
+  .card b{display:block;margin-bottom:8px}
+  ol{margin:0;padding-left:20px;color:var(--mute);display:grid;gap:6px}
+  ol strong{color:var(--ink)}
+  .share{display:inline-block;width:16px;height:18px;vertical-align:-3px;margin:0 2px}
+  small{color:var(--mute);font-size:12px}
+</style>
+</head>
+<body>
+<main>
+  <img src="icon-512.png" alt="Pit Wall icon: red stripes above five red start lights">
+  <div><h1>Pit Wall</h1><p>Predict every F1 race, beat the model, climb the league.</p></div>
+  <a class="open" href="https://claude.ai/artifact/Hd1mfV7bFV35XLV8JXfiqr">Open Pit Wall</a>
+  <div class="card" id="ios">
+    <b>Put it on your home screen (iPhone)</b>
+    <ol>
+      <li>Tap <strong>Share</strong> <svg class="share" viewBox="0 0 16 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 11V1M4.5 4.5L8 1l3.5 3.5M4 7H2.5v9.5h11V7H12"/></svg> at the bottom of Safari.</li>
+      <li>Choose <strong>Add to Home Screen</strong>, then <strong>Add</strong>.</li>
+      <li>Tap the new <strong>Pit Wall</strong> icon to play.</li>
+    </ol>
+  </div>
+  <div class="card" id="android">
+    <b>On Android</b>
+    <ol><li>Tap the <strong>⋮</strong> menu in Chrome and choose <strong>Add to Home screen</strong>.</li></ol>
+  </div>
+  <small>The game runs on Claude. Sign in to Claude to save your picks and join the league.</small>
+</main>
+<script>
+  var ua = navigator.userAgent;
+  if (/android/i.test(ua)) document.getElementById('ios').hidden = true;
+  else if (/iphone|ipad|ipod/i.test(ua)) document.getElementById('android').hidden = true;
+</script>
+</body>
+</html>
